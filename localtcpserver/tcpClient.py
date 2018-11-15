@@ -11,7 +11,7 @@ def Main():
 	# Create socket object 
 	s = socket.socket()
 	
-	# Connect host to the local machine
+	# Connect host to the loopback address
 	s.connect((host,port))
 	
 	# Create input method for the message that you will send

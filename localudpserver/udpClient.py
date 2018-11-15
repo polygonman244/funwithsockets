@@ -20,6 +20,7 @@ def Main():
 	message = input("->")
 	
 	# Create while loop for connection
+		# Like in the TCP server, we will have the user type 'q' to quit
 	while message != 'q':
 		
 		# Encode/decode the message and tell it where to go
@@ -28,7 +29,7 @@ def Main():
 		data = data.decode('utf-8')
 		
 		# Let the user know that the message was received
-		print("Recieved from server: " + data)
+		print ("Recieved from server: " + data)
 		message = input("->")
 		
 	# Close the program	
