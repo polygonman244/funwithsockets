@@ -1,6 +1,8 @@
 # Building a TCP server with Python 3
 
 # Import the sockets module for networking
+# Import hashlib so we can securely hash our message digest
+import hashlib
 import socket
 
 def Main():
@@ -12,11 +14,8 @@ def Main():
 	# Create socket object 
 	s = socket.socket()
 	
-	# Bind host to the loopback address
+	# Bind host to the local machine
 	s.bind((host,port))
-
-	# Tell user that server has started
-	print ("Server has started.")
 	
 	# Set to listen on port 5000
 	s.listen(1)
@@ -33,7 +32,7 @@ def Main():
 		# If there is no data coming through, break the while loop
 		if not data:
 			break
-		print ("From connected user: " + data)
+		print("From connected user: " + data)
 		
 		# Send data back to client only in upper case characters
 		data = data.upper()

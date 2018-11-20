@@ -1,4 +1,8 @@
 # UDP server with python3
+
+# Import the sockets module for networking
+# Import hashlib so we can securely hash our message digest
+import hashlib
 import socket
 
 def Main():

@@ -1,5 +1,8 @@
 # Client side part of our python TCP server
 
+# Import the sockets module for networking
+# Import hashlib so we can securely hash our message digest
+import hashlib
 import socket
 
 def Main():
@@ -11,7 +14,7 @@ def Main():
 	# Create socket object 
 	s = socket.socket()
 	
-	# Connect host to the loopback address
+	# Connect host to the local machine
 	s.connect((host,port))
 	
 	# Create input method for the message that you will send
